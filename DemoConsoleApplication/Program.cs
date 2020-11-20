@@ -12,7 +12,7 @@ namespace DemoConsoleApplication
 
             int number = int.Parse(input);
 
-            if(number >= 50)
+            if(number >= 100)
             {
                 Console.WriteLine("That's a big number");
             }
