@@ -4,47 +4,32 @@ namespace DemoConsoleApplication
 {
     class Program
     {
+
+        static string[] words = { "gfwer", "wgvfre" };
+
+        static void Method()
+        {
+                string[] words = new string[2];
+                words[0] = "bum";
+                words[1] = "frew";
+
+        }
+
+        static void DisplayWords()
+        {
+            for(int i = 0; i < words.Length; i++)
+            {
+                Console.WriteLine(words[i]);
+            }
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Simon's High Score Game!");
-            int highscore = 0;
+            DisplayWords();
 
-            do
-            {
-                Console.WriteLine("What score would you like?");
-                string inputString = Console.ReadLine();
-                int score = int.Parse(inputString);
+            Method();
 
-                if(score > highscore)
-                {
-                    Console.WriteLine("Congratulations! " + score + " is the high score");
-                    highscore = score;
-                }
-
-                Console.WriteLine("Would you like to play again?");
-
-                inputString = Console.ReadLine();
-
-                if(inputString != "no")
-                {
-                    continue;
-                }
-
-                Console.WriteLine("Are you sure you want to quit?");
-
-                inputString = Console.ReadLine();
-
-                if(inputString == "yes")
-                {
-                    Console.WriteLine("Goodbye. Come back soon!");
-                    break;
-                }
-
-                Console.WriteLine("Great, Let's play again then!");
-
-            } while (true);
-            Console.WriteLine("Program will now exit");
-
+            DisplayWords();
         }
     }
 }
