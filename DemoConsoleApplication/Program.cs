@@ -29,6 +29,8 @@ namespace DemoConsoleApplication
 
             Method();
 
+            Console.WriteLine("Some change");
+
             DisplayWords();
         }
     }
